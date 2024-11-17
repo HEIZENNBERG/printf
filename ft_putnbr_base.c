@@ -6,12 +6,11 @@
 /*   By: onajem <onajem@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 17:46:30 by onajem            #+#    #+#             */
-/*   Updated: 2024/11/17 15:48:49 by onajem           ###   ########.fr       */
+/*   Updated: 2024/11/17 16:59:53 by onajem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
 
 static void	print_res(long long nb, char *base, int bs, int *count)
 {
@@ -23,11 +22,11 @@ static void	print_res(long long nb, char *base, int bs, int *count)
 		{
 			print_res(nb / bs, base, bs, count);
 			print_res(nb % bs, base, bs, count);
-		}	
+		}
 	}
 }
 
-void	ft_putnbr_base(long long nb, char *base, int bs ,int *count)
+void	ft_putnbr_base(long long nb, char *base, int bs, int *count)
 {
 	if (*count != -1)
 	{

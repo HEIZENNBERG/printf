@@ -6,7 +6,7 @@
 /*   By: onajem <onajem@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 17:13:13 by onajem            #+#    #+#             */
-/*   Updated: 2024/11/17 15:48:00 by onajem           ###   ########.fr       */
+/*   Updated: 2024/11/17 17:00:18 by onajem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	hex_putnbr(unsigned long long nb, int *count)
 {
-	char *base;
+	char	*base;
 
 	if (*count != -1)
 	{

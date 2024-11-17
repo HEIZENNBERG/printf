@@ -6,7 +6,7 @@
 /*   By: onajem <onajem@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 20:11:47 by onajem            #+#    #+#             */
-/*   Updated: 2024/11/17 15:57:45 by onajem           ###   ########.fr       */
+/*   Updated: 2024/11/17 17:06:42 by onajem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,6 @@ static int	print_var(char c, va_list ap)
 		"0123456789ABCDEF", 16, &count);
 	else if (c == '%')
 		print_char('%', &count);
-	else 
-		return (-1);
 	return (count);
 }
 
