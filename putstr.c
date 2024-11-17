@@ -6,7 +6,7 @@
 /*   By: onajem <onajem@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 17:37:15 by onajem            #+#    #+#             */
-/*   Updated: 2024/11/16 16:19:02 by onajem           ###   ########.fr       */
+/*   Updated: 2024/11/17 16:06:06 by onajem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,13 @@
 void	putstr(char *str, int *count)
 {
 	int	i;
-    if (!str)
-		str = "(null)";
-	i = 0;
-	while (str[i] != '\0')
-		*count += write(1, &str[i++], 1);
+
+	if (*count != -1)
+	{
+		if (!str)
+			str = "(null)";
+		i = 0;
+		while (str[i] != '\0' && *count != -1)
+			*count += write(1, &str[i++], 1);	
+	}
 }

@@ -7,9 +7,8 @@
 
 int main()
 {
-    ft_printf("%p\n", (void *)-5168);
-    printf("%p" ,(void *)-5168);
-
+    printf("%d\n", ft_printf("%s", "some string with %s hehe"));
+    printf("%d", printf("%s", "some string with %s hehe"));
     return 0;
 }
 

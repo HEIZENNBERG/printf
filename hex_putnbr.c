@@ -6,7 +6,7 @@
 /*   By: onajem <onajem@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 17:13:13 by onajem            #+#    #+#             */
-/*   Updated: 2024/11/16 20:41:33 by onajem           ###   ########.fr       */
+/*   Updated: 2024/11/17 15:48:00 by onajem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,15 @@ void	hex_putnbr(unsigned long long nb, int *count)
 {
 	char *base;
 
-	base = "0123456789abcdef";
-	if (nb < 16)
-		print_char(base[nb], count);
-	else
+	if (*count != -1)
 	{
-		hex_putnbr(nb / 16, count);
-		hex_putnbr(nb % 16, count);
+		base = "0123456789abcdef";
+		if (nb < 16)
+			print_char(base[nb], count);
+		else
+		{
+			hex_putnbr(nb / 16, count);
+			hex_putnbr(nb % 16, count);
+		}
 	}
 }
