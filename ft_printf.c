@@ -6,7 +6,7 @@
 /*   By: onajem <onajem@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 20:11:47 by onajem            #+#    #+#             */
-/*   Updated: 2024/11/17 17:06:42 by onajem           ###   ########.fr       */
+/*   Updated: 2024/11/18 20:48:04 by onajem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,12 +45,8 @@ int	ft_printf(const char *str, ...)
 	va_list	ap;
 	int		count;
 
-	if (!str)
-		return (0);
 	count = 0;
 	va_start(ap, str);
-	if (!str)
-		return (-1);
 	while (*str != '\0' && count != -1)
 	{
 		if (*str == '%')

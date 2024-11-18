@@ -7,8 +7,8 @@
 
 int main()
 {
-printf("%d\n", ft_printf("Test: %s\n", "Hello"));
-printf("%d\n", printf("Test: %s\n", "Hello"));
+	ft_printf(NULL);
+
 
     return 0;
 }
