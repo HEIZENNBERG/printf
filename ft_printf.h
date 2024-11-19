@@ -6,14 +6,14 @@
 /*   By: onajem <onajem@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 17:18:56 by onajem            #+#    #+#             */
-/*   Updated: 2024/11/17 16:58:21 by onajem           ###   ########.fr       */
+/*   Updated: 2024/11/19 17:58:33 by onajem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include <libc.h>
+# include <unistd.h>
 # include <stdarg.h>
 
 void	putstr(char *str, int *count);

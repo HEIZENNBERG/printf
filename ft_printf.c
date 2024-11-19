@@ -6,7 +6,7 @@
 /*   By: onajem <onajem@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 20:11:47 by onajem            #+#    #+#             */
-/*   Updated: 2024/11/18 20:48:04 by onajem           ###   ########.fr       */
+/*   Updated: 2024/11/19 18:11:06 by onajem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ int	ft_printf(const char *str, ...)
 	int		count;
 
 	count = 0;
+	if (write(1, "", 0) == -1)
+		return (-1);
 	va_start(ap, str);
 	while (*str != '\0' && count != -1)
 	{
