@@ -51,9 +51,9 @@ int	ft_printf(const char *str, ...)
 	va_start(ap, str);
 	while (*str != '\0' && count != -1)
 	{
-		if (*str == '%')
+		if (*str == '%' && *(str + 1))
 			count += print_var(*(++str), ap);
-		else
+		else if (*str != '%')
 			print_char(*str, &count);
 		str++;
 	}
